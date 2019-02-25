@@ -13,4 +13,4 @@ RUN mv sqlmap /usr/bin/
 RUN python /usr/bin/sqlmap/sqlmap.py --version
 
 # System variable
-ENV sqlmap "python /usr/bin/sqlmap/sqlmap.py"
+ENV sqlmap /usr/bin/sqlmap/sqlmap.py
