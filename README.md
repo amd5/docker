@@ -26,4 +26,10 @@ wget http://c32.19aq.com/Linux/Docker/build.sh && chmod +x build.sh && ./build.s
 docker inspect --format='{{.Name}} - {{.NetworkSettings.IPAddress}}' $(sudo docker ps -a -q)
 
 
+docker run -it 9613 /bin/bash        4位数字是镜像ID前4位
 
+CMD ["executable","param1","param2"] 使用 exec 执行，推荐方式；
+
+CMD command param1 param2 在 /bin/sh 中执行，提供给需要交互的应用；
+
+CMD ["param1","param2"] 提供给 ENTRYPOINT 的默认参数；
