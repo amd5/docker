@@ -11,6 +11,8 @@ RUN mv sqlmap* sqlmap
 RUN chmod 777 /usr/bin
 RUN mv sqlmap /usr/bin/
 RUN python /usr/bin/sqlmap/sqlmap.py --version
+RUN echo "alias sqlmap='python /usr/bin/sqlmap/sqlmap.py'">>~/.bashrc
+
 
 # System variable
-ENV sqlmap /usr/bin/sqlmap/sqlmap.py
+#ENV sqlmap /usr/bin/sqlmap/sqlmap.py
