@@ -5,4 +5,4 @@ FROM python:2.7
 MAINTAINER c32 amd5@qq.com
 
 # Add to docker and Unpacking
-ADD https://github.com/sqlmapproject/sqlmap/tarball/master
+ADD https://github.com/sqlmapproject/sqlmap/tarball/master /
