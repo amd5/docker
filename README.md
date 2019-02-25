@@ -5,12 +5,14 @@ docker test
 在docker-compose.yml中定义组成应用程序的服务，以便它们可以在隔离的环境中一起运行。
 运行docker-compose并撰写开始并运行你的整个应用程序。
 
-
+# Help
+docker --help
+docker build --help
 
 
 # 编译
-docker build -t centos_nginx:1.0 .
-
+docker build -t centos_nginx:1.0 .    #使用. 当目录的Dockerfile编译名称为centos_nginx 标签为1.0 的镜像
+docker build -f /path/to/a/Dockerfile .    #指定Dockerfile路径及文件名进行编译
 
 # 启动
 docker run -it 9613 /bin/bash        4位数字是镜像ID前4位
@@ -23,9 +25,7 @@ docker inspect --format='{{.Name}} - {{.NetworkSettings.IPAddress}}' $(sudo dock
 # 启动参数
 
 CMD ["executable","param1","param2"] 使用 exec 执行，推荐方式；
-
 CMD command param1 param2 在 /bin/sh 中执行，提供给需要交互的应用；
-
 CMD ["param1","param2"] 提供给 ENTRYPOINT 的默认参数；
 
 
