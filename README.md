@@ -33,3 +33,6 @@ CMD ["executable","param1","param2"] 使用 exec 执行，推荐方式；
 CMD command param1 param2 在 /bin/sh 中执行，提供给需要交互的应用；
 
 CMD ["param1","param2"] 提供给 ENTRYPOINT 的默认参数；
+
+镜像无法删除：
+删除时不使用镜像ID  使用名称+版本即可删除

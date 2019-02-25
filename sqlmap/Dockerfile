@@ -11,4 +11,4 @@ RUN wget http://c32.19aq.com/Linux/sh/sqlmap.sh && \
 	./sqlmap.sh
 
 #Run Command
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
