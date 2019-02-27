@@ -27,6 +27,7 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 yum --enablerepo=base clean metadata
 #安装yum-config-manager
 #增加docker源
+yum -y install yum-utils
 yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 yum --assumeno update
 #安装docker所需的依赖环境
