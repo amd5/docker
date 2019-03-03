@@ -22,7 +22,7 @@ php:
   restart: always
   ports:
     - '9000:9000/tcp'
-  # volumes:
-    # - /home/wwwroot/html:/usr/share/nginx/html
+  volumes:
+    - 'home:/www:rw'
   labels:
     aliyun.scale: '1'
