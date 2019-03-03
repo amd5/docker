@@ -5,20 +5,22 @@ web:
     - '80:80/tcp'
     - '443:443/tcp'
   restart: always
+  links:
+      - php:php70
   # volumes:
     # - /home/nginx/conf.d:/etc/nginx/conf.d
     # - /home/wwwroot/html:/usr/share/nginx/html
   labels:
     aliyun.scale: '1'    #设置容器数量
     aliyun.routing.port_80: 'http://docker.19aq.com'     #设置该服务的访问域名
-    # aliyun.depends: php   # 参考 https://help.aliyun.com/document_detail/26086.html?spm=5176.2020520152.0.0.10af16ddNfQTC2
+    aliyun.depends: php   # 参考 https://help.aliyun.com/document_detail/26086.html?spm=5176.2020520152.0.0.10af16ddNfQTC2
 php:
-  container_name: php70
+  # container_name: php70
   image: registry.cn-zhangjiakou.aliyuncs.com/c32/docker:php70
   restart: always
   ports:
     - '9000:9000/tcp'
   # volumes:
     # - /home/wwwroot/html:/usr/share/nginx/html
-  # labels:
-    # aliyun.scale: '1'
+  labels:
+    aliyun.scale: '1'
