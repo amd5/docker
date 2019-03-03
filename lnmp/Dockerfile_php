@@ -7,3 +7,12 @@ MAINTAINER c32 amd5@qq.com
 # setting time
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN docker-php-ext-install gd \
+	&& docker-php-ext-install pdo_mysql 
+
+
+
+# backup
+#RUN docker-php-ext-install gd \
+#	&& docker-php-ext-install pdo_mysql \
+#	&& pecl install /home/redis.tgz && echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini
