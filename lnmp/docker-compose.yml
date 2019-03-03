@@ -16,6 +16,8 @@ php:
   container_name: php70
   image: registry.cn-zhangjiakou.aliyuncs.com/c32/docker:php70
   restart: always
+  # ports:
+    # - '9000:9000/tcp'
   # volumes:
     # - /home/wwwroot/html:/usr/share/nginx/html
   # labels:
