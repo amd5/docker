@@ -5,7 +5,7 @@ FROM nginx:1.15
 MAINTAINER c32 amd5@qq.com
 
 # Add to docker and Unpacking
-ADD ./default.conf /etc/nginx/conf.d/default.conf
+ADD ./default.conf /etc/nginx/conf.d/cadb.conf
 #ADD http://c32.19aq.com/Linux/Docker/Nginx/index1.html /www/index1.html
 #ADD http://c32.19aq.com/Linux/Docker/Nginx/index1.php /www/index1.php
 #RUN cd /usr/share/nginx/ && chmod 755 -R html

@@ -10,8 +10,6 @@
 #============================mysql变量================================
 path=$(cd `dirname $0`; pwd)
 cd $path
-git pull 2>&1
-read -s -n1 -p "按任意键继续提交新版本 ... "
 git add .
 git commit -m "提交版本"
 git push
