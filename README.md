@@ -5,6 +5,10 @@ docker test
 在docker-compose.yml中定义组成应用程序的服务，以便它们可以在隔离的环境中一起运行。
 运行docker-compose并撰写开始并运行你的整个应用程序。
 
+
+基础命令
+https://www.cnblogs.com/wenbronk/p/6387830.html
+
 # Help
 docker --help
 docker build --help
