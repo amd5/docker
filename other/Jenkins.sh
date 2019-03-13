@@ -1,4 +1,5 @@
 #!/bin/sh
+echo '>>> Get whoami'
 id
-set +e
 echo '>>> Get old container id'
+/usr/bin/docker ps
