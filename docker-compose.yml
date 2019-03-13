@@ -24,7 +24,8 @@ services:
     image: c32_php:1.0
     networks:
       - backend
-
+    volumes:                                  #映射目录 宿主机:容器
+      - /home:/home
 networks:
   frontend:
     driver: bridge
