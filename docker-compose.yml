@@ -3,13 +3,27 @@ services:
   web:
     build:
       context: ./Nginx
-      dockerfile: nginx
+      dockerfile: ng
     container_name: nginx                     #容器名称
     image: c32_nginx:1.0                         #镜像
-
+    depends_on:                               #依赖
+      - php
+    ports:                                    #映射端口 宿主机:容器
+      - "80:80"
+      - "443:443"
     networks:                                 #容器使用网络
       - frontend
       - backend
+
+    links:
+      - php:php70
+  php:
+    build: ./PHP
+    container_name: php70
+    image: c32_php:1.0
+    networks:
+      - backend
+
 networks:
   frontend:
     driver: bridge
