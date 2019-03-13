@@ -6,5 +6,4 @@ MAINTAINER c32 amd5@qq.com
 
 # Add to docker and Unpacking
 ADD ./conf.d/default.conf /etc/nginx/conf.d/default.conf
-#ADD http://c32.19aq.com/Linux/Docker/Nginx/index1.html /usr/share/nginx/html/index.html
-#RUN cd /usr/share/nginx/ && chmod 755 -R html
+
