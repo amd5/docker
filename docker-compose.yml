@@ -2,7 +2,7 @@ version: '2'
 services:
   web:
     build: .
-      #dockerfile: Dockerfile
+      dockerfile: nginx
     container_name: nginx                     #容器名称
     image: c32_nginx:1.0                         #镜像
 
