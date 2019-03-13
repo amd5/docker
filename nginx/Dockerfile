@@ -1,5 +1,4 @@
 # Base Image
-#FROM nginx:latest
 FROM nginx:1.15
 
 # Author
@@ -8,4 +7,4 @@ MAINTAINER c32 amd5@qq.com
 # Add to docker and Unpacking
 #ADD http://c32.19aq.com/Linux/Docker/Nginx/default.conf /etc/nginx/conf.d/
 ADD http://c32.19aq.com/Linux/Docker/Nginx/index1.html /usr/share/nginx/html/index.html
-RUN cd /usr/share/nginx/ && chmod 755 -R html
+#RUN cd /usr/share/nginx/ && chmod 755 -R html
